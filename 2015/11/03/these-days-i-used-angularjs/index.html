@@ -1,0 +1,785 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="React,Angular,Javascript," />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+
+
+<meta name="description" content="There are so many leading front-end libraries such as ReactJS, CycleJS, Elm …, etc. But, today I want to talk about AngularJS, the first MV* framework I met.
+**
+It’s been over two years since I starte">
+<meta property="og:type" content="article">
+<meta property="og:title" content="These days I used AngularJS">
+<meta property="og:url" content="http://yoursite.com/2015/11/03/these-days-i-used-angularjs/index.html">
+<meta property="og:site_name" content="Guan Yu Pan's blog">
+<meta property="og:description" content="There are so many leading front-end libraries such as ReactJS, CycleJS, Elm …, etc. But, today I want to talk about AngularJS, the first MV* framework I met.
+**
+It’s been over two years since I starte">
+<meta property="og:image" content="https://medium2.global.ssl.fastly.net/max/2400/1*W1lQdBP_BKy8jz8jtW054w.jpeg">
+<meta property="og:updated_time" content="2016-09-30T21:01:42.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="These days I used AngularJS">
+<meta name="twitter:description" content="There are so many leading front-end libraries such as ReactJS, CycleJS, Elm …, etc. But, today I want to talk about AngularJS, the first MV* framework I met.
+**
+It’s been over two years since I starte">
+<meta name="twitter:image" content="https://medium2.global.ssl.fastly.net/max/2400/1*W1lQdBP_BKy8jz8jtW054w.jpeg">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://yoursite.com/2015/11/03/these-days-i-used-angularjs/"/>
+
+  <title> These days I used AngularJS | Guan Yu Pan's blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-84986048-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Guan Yu Pan's blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">@jackypan1989</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                These days I used AngularJS
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2015-11-03T00:00:00+08:00" content="2015-11-03">
+              2015-11-03
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/程式設計/" itemprop="url" rel="index">
+                    <span itemprop="name">程式設計</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/程式設計/Javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">Javascript</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/程式設計/Javascript/React/" itemprop="url" rel="index">
+                    <span itemprop="name">React</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/11/03/these-days-i-used-angularjs/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/11/03/these-days-i-used-angularjs/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+              &nbsp; | &nbsp;
+              <span class="page-pv"><i class="fa fa-file-o"></i>
+              <span class="busuanzi-value" id="busuanzi_value_page_pv" ></span>
+              </span>
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>There are so many leading front-end libraries such as <a href="https://facebook.github.io/react/" target="_blank" rel="external">ReactJS</a>, <a href="http://cycle.js.org/" target="_blank" rel="external">CycleJS</a>, <a href="http://elm-lang.org/" target="_blank" rel="external">Elm</a> …, etc. But, today I want to talk about <a href="https://angularjs.org/" target="_blank" rel="external">AngularJS</a>, the first MV* framework I met.</p>
+<p><img src="https://medium2.global.ssl.fastly.net/max/2400/1*W1lQdBP_BKy8jz8jtW054w.jpeg" alt="">**</p>
+<p>It’s been over two years since I started my full-stack development career. There are so that many interesting and error-trying stories could be shared. The first project we wrote was based on jQuery and Node.js, we soon encountered problems because of numerous sporadical unstructured javascript codes in our project.</p>
+<p>So, we started to convert whole codebase into AngularJS framework. That’s exactly today’s topic I want to say. I was really amazed by the first look of demo on its official website. Especially, “<strong>two-way data binding</strong>”, you could easily bind the model to your view. The view automatically updated once model changed. How fantastic!</p>
+<p>We used <a href="http://mean.io/#!/" target="_blank" rel="external">MEAN</a> stack (combination of MongoDB, Express, Angular, and Node.js) to be our starting point. Everything was great, the views of application were indeed developed so quickly. However, one year later, along with project’s growth, it became so hard to maintain whole application state and its performance. I started to consider about some techniques about virtual-dom and Flux … And rethink some core issues of AngularJS.</p>
+<h3 id="It’s-not-simple-It-tries-to-cover-everything"><a href="#It’s-not-simple-It-tries-to-cover-everything" class="headerlink" title="It’s not simple. It tries to cover everything."></a>It’s not simple. It tries to cover everything.</h3><p>AngularJS want to do everything, you have to know so many concepts like module, controller, service, filter, routing, scope, directives …, etc. BANG! That’s why the guide book <a href="https://www.ng-book.com/" target="_blank" rel="external">ng-book</a> is up to 600+ pages. It’s hard to learn and cooperate for beginners.</p>
+<h3 id="Not-welcome-for-other-libraries"><a href="#Not-welcome-for-other-libraries" class="headerlink" title="Not welcome for other libraries"></a>Not welcome for other libraries</h3><p>If we want to use other libraries, we have to package them into AngularJS’ module. Although there are a bounty of contributors in community, it still would be a barrier for existing projects and WIP projects.</p>
+<h3 id="HTML-sugar-somehow-is-not-good"><a href="#HTML-sugar-somehow-is-not-good" class="headerlink" title="HTML sugar somehow is not good."></a>HTML sugar somehow is not good.</h3><p>We can view AngularJS as a strong jQuery because of its syntax sugar. After page loading, the core module will scan all DOMs with ng-syntax like ng-click, and bind the event on it. Nowadays, we all knew the manipulation of DOM is expensive. That’s why “html-based” AngularJS is not good for performance. And virtual-dom techniques will save us.</p>
+<h3 id="Two-way-data-binding-oh-no"><a href="#Two-way-data-binding-oh-no" class="headerlink" title="Two-way data binding, oh no."></a><strong>Two-way data binding, oh no.</strong></h3><p>In the blackbox, the only thing we know is AngularJS will do all the model checks which we called ‘dirty check’. So we have to write more and more $watch and $observe to make sure the application state. Also, the $scope’s inheritance always breaks application data flow. After using Flux or other unidirectional data flow diagram, it’s much more easy to debug. WHAT?! Do you remember the amazing part we mentioned? Yes, we removed it. The core, “ng-model” is gone.</p>
+<p>Hmmmmm… It sounds not cool for AngularJS lovers.</p>
+<h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>Therefore, I started using <a href="https://github.com/teropa/angular-virtual-dom" target="_blank" rel="external">angular-virtual-dom</a> and <a href="https://github.com/christianalfoni/flux-angular" target="_blank" rel="external">flux-angular</a> to reconstruct whole program. Somehow, it’s already far away from original code and the application paradigm. That’s why we use <a href="https://facebook.github.io/react/" target="_blank" rel="external">ReactJS</a> with Flux-like data flow now, not AngularJS.</p>
+<p>If you really want to use AngularJS, I strongly recommend it only in simple CURD cases. Or you may try the wholly different library <a href="https://angular.io/" target="_blank" rel="external">AngularJS 2.0</a>.</p>
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <div>
+      
+        
+
+      
+    </div>
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/React/" rel="tag">#React</a>
+          
+            <a href="/tags/Angular/" rel="tag">#Angular</a>
+          
+            <a href="/tags/Javascript/" rel="tag">#Javascript</a>
+          
+        </div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+          </div>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2016/01/22/major-party-cabinet-in-5-min/" rel="prev" title="五分鐘理解『多數黨組閣』">
+                五分鐘理解『多數黨組閣』 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+  <div class="comments" id="comments">
+    
+      <div id="disqus_thread">
+        <noscript>
+          Please enable JavaScript to view the
+          <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a>
+        </noscript>
+      </div>
+    
+  </div>
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            Overview
+          </li>
+        </ul>
+      
+
+      <section class="site-overview sidebar-panel ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://avatars1.githubusercontent.com/u/1138803"
+               alt="Guan Yu Pan" />
+          <p class="site-author-name" itemprop="name">Guan Yu Pan</p>
+          <p class="site-description motion-element" itemprop="description">FP Explorer With Full Stack JS #FRP #RxJS #Redux #React</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">5</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">25</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">21</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/jackypan1989" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.linkedin.com/in/pan-guan-yu-3874a150" target="_blank" title="Linkedin">
+                  
+                    <i class="fa fa-fw fa-linkedin-square"></i>
+                  
+                  Linkedin
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://facebook.com/jackypan1989" target="_blank" title="Facebook">
+                  
+                    <i class="fa fa-fw fa-facebook"></i>
+                  
+                  Facebook
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/jackypan1989" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.instagram.com/jackypan1989" target="_blank" title="Instagram">
+                  
+                    <i class="fa fa-fw fa-instagram"></i>
+                  
+                  Instagram
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://medium.com/@jackypan1989" target="_blank" title="Medium">
+                  
+                    <i class="fa fa-fw fa-medium"></i>
+                  
+                  Medium
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://stackoverflow.com/users/1957363/jackypan1989" target="_blank" title="S.O.">
+                  
+                    <i class="fa fa-fw fa-stack-overflow"></i>
+                  
+                  S.O.
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+
+        
+        
+
+      </section>
+
+      
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+            
+              
+            
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#It’s-not-simple-It-tries-to-cover-everything"><span class="nav-number">1.</span> <span class="nav-text">It’s not simple. It tries to cover everything.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Not-welcome-for-other-libraries"><span class="nav-number">2.</span> <span class="nav-text">Not welcome for other libraries</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTML-sugar-somehow-is-not-good"><span class="nav-number">3.</span> <span class="nav-text">HTML sugar somehow is not good.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Two-way-data-binding-oh-no"><span class="nav-number">4.</span> <span class="nav-text">Two-way data binding, oh no.</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Conclusion"><span class="nav-number">5.</span> <span class="nav-text">Conclusion</span></a></li></ol></div>
+            
+          </div>
+        </section>
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Guan Yu Pan</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.0.1"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.0.1"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'jackypan1989';
+      var disqus_identifier = '2015/11/03/these-days-i-used-angularjs/';
+      var disqus_title = "These days I used AngularJS";
+      var disqus_url = 'http://yoursite.com/2015/11/03/these-days-i-used-angularjs/';
+
+      function run_disqus_script(disqus_script){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+      
+        run_disqus_script('embed.js');
+      
+    </script>
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
