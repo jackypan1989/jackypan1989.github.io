@@ -1,0 +1,1530 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+  <meta property="fb:admins" content="1567616149" />
+  <meta property="fb:app_id" content="214949102255965" />
+
+
+
+<meta name="description" content="FP Explorer With Full Stack JS #FRP #RxJS #Redux #React">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Guan Yu Pan's blog">
+<meta property="og:url" content="http://jackypan1989.com/index.html">
+<meta property="og:site_name" content="Guan Yu Pan's blog">
+<meta property="og:description" content="FP Explorer With Full Stack JS #FRP #RxJS #Redux #React">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Guan Yu Pan's blog">
+<meta name="twitter:description" content="FP Explorer With Full Stack JS #FRP #RxJS #Redux #React">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: 0,
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://jackypan1989.com/"/>
+
+  <title> Guan Yu Pan's blog </title>
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="en">
+
+  
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '214949102255965',
+      xfbml      : true,
+      version    : 'v2.6'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-84986048-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left 
+   page-home 
+ ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Guan Yu Pan's blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">@jackypan1989</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/09/06/civil-note-1/" itemprop="url">
+                  民法筆記(1) - 民法概要
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-09-06T00:00:00+08:00" content="2016-09-06">
+              2016-09-06
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/學習筆記/" itemprop="url" rel="index">
+                    <span itemprop="name">學習筆記</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/學習筆記/法律/" itemprop="url" rel="index">
+                    <span itemprop="name">法律</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/學習筆記/法律/民法/" itemprop="url" rel="index">
+                    <span itemprop="name">民法</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/09/06/civil-note-1/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/09/06/civil-note-1/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>民法屬我國「私法」，其定義了私人與私人間平等的權利義務關係，在大多數沒有爭議或違反社會公序良俗的情況底下，都是說好就好，依契約行事，一旦發生問題時，民法就給予了一個指示<strong>裁判(司法人員)</strong>的功能</p>
+<p>民法可分為兩個功能面向</p>
+<ol>
+<li>行為規範</li>
+<li>裁判規範 (絕大多數民法)</li>
+</ol>
+<h2 id="分類"><a href="#分類" class="headerlink" title="分類"></a>分類</h2><p>其中裁判規範可以分為兩個大項</p>
+<ol>
+<li><p>完全性法條 (如 <a href="#179">179</a> )</p>
+<blockquote>
+<p>法條為 「若 A 則 B 」之結構<br>其中 A 為<strong>構成要件</strong>, B 為<strong>法律效果</strong><br>要件一旦不構成, 則無法律效果  </p>
+<p>以 <a href="#179">179</a> 為例<br>A 為「無法律上之原因而受利益，致他人受損害」<br>B 為「返還其利益」<br>A =&gt; B 之成立，為民法最重要的一環</p>
+</blockquote>
+</li>
+<li><p>輔助性法條 (如 <a href="#181">181</a> 輔助 <a href="#179">179</a> )</p>
+<blockquote>
+<p>非 A =&gt; B 之結構<br>用來補充完全性法條<br>以 <a href="#181">181</a> 為例<br>定義了 <a href="#179">179</a>「返還其利益」的範圍</p>
+</blockquote>
+</li>
+</ol>
+<h2 id="民法三步驟"><a href="#民法三步驟" class="headerlink" title="民法三步驟"></a>民法三步驟</h2><ol>
+<li>找出『系爭事實』</li>
+<li>找出『法律規範』</li>
+<li>找出『權利義務』</li>
+</ol>
+<blockquote>
+<ol>
+<li>發生了爭議  </li>
+<li>根據事實尋找合適的法條  </li>
+<li>套用完全性法條，必要時加以輔助性法條  </li>
+<li>符合法條中 「構成要件」 =&gt; 「法律效果」 之結構  </li>
+<li>發生法條所規範之權利義務關係</li>
+</ol>
+</blockquote>
+<h2 id="案例"><a href="#案例" class="headerlink" title="案例"></a>案例</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">甲 -------------&gt; 乙</div><div class="line">     租賃 A 地        </div><div class="line">         ^</div><div class="line">         |</div><div class="line">         | 佔用擺攤</div><div class="line">         |</div><div class="line">         丙 ------&gt; 丁</div><div class="line">             僱傭</div></pre></td></tr></table></figure>
+<p>A地之所有權人甲，租了土地給乙，但丙看土地沒人正在使用，便在A地上擺攤，並且請了員工丁來顧</p>
+<ol>
+<li><p>甲 -&gt; 丙 (請求租金)<br>訴之聲明: 依據 <a href="#179">179 不當得利</a> 聲明租金請求權<br>(其中請求權為<strong>訴訟標的</strong>)</p>
+<blockquote>
+<p>依據 <a href="#179">179</a> 要有三個構成要件  </p>
+<blockquote>
+<p>一方有利益 (O)<br>致他人受損害 (X)<br>無法律原因 (O)  </p>
+</blockquote>
+<p>但甲已經從乙身上有收到租金，故甲無受到損害，因此，甲丙之間無 <a href="#179">179</a> 之不當得利權利義務關係</p>
+</blockquote>
+</li>
+<li><p>甲 -&gt; 丁 (拆攤還地)<br>依據 <a href="#767">767-1 物權圓滿使用</a> 聲明返還請求權(還地)/除去請求權(拆攤)</p>
+<blockquote>
+<p><a href="#767">767</a> 包含了三個 A =&gt; B (返還/除去妨害/防止妨害)<br>其中構成要件有</p>
+<blockquote>
+<p>所有權人之所有物 (O)<br>無權占有，侵奪，不法妨害 (X)  </p>
+</blockquote>
+<p>丙確實無權占有，但因為丁為受僱者，根據 942 之規定，丁只是占有輔助人而非占有人，因此甲丁之間無 <a href="#767">767</a> 條之權利義務關係</p>
+</blockquote>
+</li>
+<li><p>乙 -&gt; 丙 (拆攤還地)</p>
+<blockquote>
+<p>無法使用 <a href="#767">767-1</a> 之 返還 (因非所有權人)<br>無法使用 <a href="#767">767-2</a> 之 除去妨害 (地上權為準用所有權，同上)<br>可用 <a href="#962">962</a> 之 佔有人請求權</p>
+<p><a href="#962">962</a> 之存在有其原因，原本發生爭議時應該由乙去找甲，再由甲提出 <a href="#767">767</a> 來拆攤還地，但為了方便性，給了乙相當請求權地位的佔有人請求權，又稱為暫時性救濟 ( <a href="#962">962</a> 一年內不行使消滅)</p>
+</blockquote>
+</li>
+</ol>
+<h3 id="補充"><a href="#補充" class="headerlink" title="補充"></a>補充</h3><p>國家，權利人，義務人是民法三個元件，<br>國家主要負責裁判，我國為了司法利用效率，通常會訂定15年內，權利人必須請求權利，否則權利消滅</p>
+<h2 id="引用條文"><a href="#引用條文" class="headerlink" title="引用條文"></a>引用條文</h2><h4 id="179"><a href="#179" class="headerlink" title="179"></a>179</h4><p>無法律上之原因而受利益，致他人受損害者，應返還其利益。雖有法律上之原因，而其後已不存在者，亦同。</p>
+<h4 id="181"><a href="#181" class="headerlink" title="181"></a>181</h4><p>不當得利之受領人，除返還其所受之利益外，如本於該利益更有所取得者，並應返還。但依其利益之性質或其他情形不能返還者，應償還其價額。</p>
+<h4 id="767"><a href="#767" class="headerlink" title="767"></a>767</h4><p>所有人對於無權佔有或侵奪其所有物者，得請求返還之。對於妨害其所有權者，得請求除去之。有妨害其所有權之虞者，得請求防止之。前項規定，於所有權以外之物權，準用之。</p>
+<h4 id="942"><a href="#942" class="headerlink" title="942"></a>942</h4><p>受僱人、學徒、家屬或基於其他類似之關係，受他人之指示，而對於物有管領之力者，僅該他人為佔有人。</p>
+<h4 id="962"><a href="#962" class="headerlink" title="962"></a>962</h4><p>佔有人，其佔有被侵奪者，得請求返還其佔有物；佔有被妨害者，得請求除去其妨害；佔有有被妨害之虞者，得請求防止其妨害。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/06/01/rhino-2016-half-view/" itemprop="url">
+                  義大犀牛球季展望
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-06-01T00:00:00+08:00" content="2016-06-01">
+              2016-06-01
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/棒球/" itemprop="url" rel="index">
+                    <span itemprop="name">棒球</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/棒球/CPBL/" itemprop="url" rel="index">
+                    <span itemprop="name">CPBL</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/06/01/rhino-2016-half-view/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/06/01/rhino-2016-half-view/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <h2 id="義大犀牛球季展望"><a href="#義大犀牛球季展望" class="headerlink" title="義大犀牛球季展望"></a>義大犀牛球季展望</h2><blockquote>
+<p>中職球季正式超過 1/3，此時也進入義大犀牛的關鍵爭冠期，特別是與目前聯盟排頭中信兄弟的剩餘六場賽事，場場都關係到上半季冠軍的角逐。然而，從開季前各界的不看好，一直到現在被譽為投打均衡的爭冠陣容，究竟跟過去幾年有什麼不一樣？還有哪些地方可以再加強或是高度期待的呢？</p>
+</blockquote>
+<p><strong>帶兵帶心的教練團</strong></p>
+<p>教練團的更迭幾乎可以說明為何義大成軍前三年屢屢功虧一簣的關鍵，從2013 的徐總驟逝，該年度下半季逐漸走下坡，最後總冠軍被橫掃出局；緊接著 2013~2015 球季連續不間斷地更換教頭，不安定感不只影響軍心，也影響了教練團間的默契與整體性。</p>
+<p>然而 2015 下半季回歸台灣的葉總，在 2016 球季前就確立新一年度的葉家班教練團，主要以當初興農稱霸時期的成員(鄭兆行、張家浩)為核心，也重新給了牛迷新的期待。此外葉總的帶兵風格鮮明，強調流暢的節奏，投打守均衡，以及整體的默契性。至少在該隊球迷支持度上，可以很明顯看出球迷對於葉總帶兵帶心方式讚譽有加。而上一個給球迷期待與同樣感受的教頭，是獅隊三連霸時期的飛總呂文生，相信葉總在未來不僅僅會在牛隊發光發熱，之後在國際賽上也會再出現他的風衣身影。</p>
+<p><strong>洋將的選擇與鐵牛棚</strong></p>
+<p>從 2013 曼尼季中離開再到 2014 希克被韓職挖角，以及 2015 的雙寶事件，再到今年開季的潘力，屢次都造成戰績的重傷害。所幸很快地，重新找齊了，<strong>羅力</strong>，<strong>力猛</strong>，<strong>藍斯佛</strong>三位先發型洋將。基本上來說，備齊三位能夠吃局數，並維持一定水準的先發洋投，是一個在中職爭冠的基本要素。畢竟在 120 場賽事中，所需要的投手輪值是非常緊湊的。同時，好的先發也給中繼後援的本土牛棚有非常好的喘息機會，再加上教練團球速為上與攻擊好球帶的正確觀念，都讓今年的投手戰力耳目一新。</p>
+<p><strong>後段棒次的打擊與守備的安定感</strong></p>
+<p>相對於，以前的 N 連星與慘烈的後段棒次，今年的後段棒次實在太讓人驚喜了。從陳凱倫撐起了游擊防線開始，林威廷也完美守住二壘防區，長打也跟著長了出來，有機會在完整球季打出 20+的全壘打，之後替補游擊的羅國麟也快速地補上砲火，讓整個義大後段棒次解放了，至少擺脫了以前自殺 N 連星的稱號。當野手有了守備信心，往往打擊就會表現更好，至少不會像去年內野少了棒子同時連手套都沒了，今年鄭兆行的調教，有目共睹。相信接下來幾週，在個別傷兵(原本的連星好手們)陸續歸隊後，整條打線會更加連貫。</p>
+<p><strong>季中選秀</strong></p>
+<p>在六月底的季中選秀，相信也會是今年爭冠的重要關鍵之一，幾位年輕砲手的加入，會非常深刻影響下半季的變化。特別是<strong>楊岱均</strong>、<strong>蘇智傑</strong>兩位國家隊內野好手，讓人非常期待，一旦他們能夠補上三遊，就能讓羅國麟這類基底是外野手的砲手，重新回到他們舒服的守備位置上。一般而言，選秀最好是能夠在前兩輪選進天分高或是成熟度高的砲手，第三輪以後，再開始補進投手或工具人型野手，畢竟中職僅四隊，即便是第四順位往往都能夠補進優質選手，補洞的結果可能喪失了得到十年大物的機會(不得不稱讚桃猿隊在第四順位連續補進王柏融、林承飛等大物選手)。</p>
+<p><strong>一心就是行動，平常心看待</strong></p>
+<p>『一心』是牛隊今年喊出的口號，而標題是牛版版標，今年的整體性，真的有別於以往。相信葉總，相信每一位球員，盡全力去支持他們，用平常心看待勝負，相信這次會給牛迷不一樣的驚奇。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/05/07/prisoner-dilemma/" itemprop="url">
+                  五種面對『囚犯困境』的賽局技巧與思維
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-05-07T00:00:00+08:00" content="2016-05-07">
+              2016-05-07
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/閱讀心得/" itemprop="url" rel="index">
+                    <span itemprop="name">閱讀心得</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/05/07/prisoner-dilemma/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/05/07/prisoner-dilemma/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="https://medium2.global.ssl.fastly.net/max/4000/1*bkgfwFKLqvtB29OYMRueug.png" alt="from wiki"><em>from wiki</em></p>
+<h2 id="五種面對『囚犯困境』的賽局技巧與思維"><a href="#五種面對『囚犯困境』的賽局技巧與思維" class="headerlink" title="五種面對『囚犯困境』的賽局技巧與思維"></a>五種面對『囚犯困境』的賽局技巧與思維</h2><blockquote>
+<p>『囚犯困境』- 當兩個囚犯願意串供時，他們都能獲得最高利益，無罪釋放，但發現自己的個體優勢策略都是背叛其他人時(例如成為汙點證人)，也只能被迫選擇同時承認犯罪，產生了較差的結果，如圖。</p>
+</blockquote>
+<p>孫子兵法云：『多算勝，少算不勝』。意思是強調綜觀全局，計算多遠比計算少還要更容易在混沌的局勢中取勝。但部分真實情況更為複雜，即便人類以理性之姿計算出各種策略組合，依然會產生『個體最佳策略』不等於『集體最佳策略』的『囚犯困境』。然而在讀完『<strong>賽局意識</strong>』後，可以了解到囚犯困境是如何產生的，我也針對書中幾種解決此困境的方法來解釋，同時用生活中簡單例子給大家說明。</p>
+<h3 id="方法1-共通資源的『管制』"><a href="#方法1-共通資源的『管制』" class="headerlink" title="方法1. 共通資源的『管制』"></a>方法1. 共通資源的『管制』</h3><p>很簡單，就是大家共同享有該資源，有小至大，從生活周遭到公共資源都是這個範疇。例如社團中心的每個社團個體都不願倒垃圾(對個體最好)，結果就發現垃圾堆滿外面的共有走廊(反而結果更糟)。此時可以建立新的規矩來規範大家。至於公共議題也是，像是一大堆一人汽車造成內湖塞車，台灣漁業的耗盡等都是很明顯的例子。如果沒有透過公權力或是管制，完全依賴市場自由(個人最佳化)，反而會造成某種程度的不效率。</p>
+<h3 id="方法2-產生『聯盟』，形成壟斷或是寡占"><a href="#方法2-產生『聯盟』，形成壟斷或是寡占" class="headerlink" title="方法2. 產生『聯盟』，形成壟斷或是寡占"></a>方法2. 產生『聯盟』，形成壟斷或是寡占</h3><p>這是在多個銷售同質商品的商家中會出現的困境。在自由市場下很容易引起價格戰，此時如果能夠有人或是中介人跳出來，跟大家協調公定價，或是實行買貴退差價，都是逃出囚犯困境的方法。不過有些時候聯盟並非是壞事，譬如農民集體談判，或是像高單價的奢侈品市場。鑽石就是書中一個最佳案例。其實鑽石產量並不少但之所以是高價格，乃自於其長達一世紀的壟斷性，又因為消費者的最佳策略是希望維持高價(鑽石婚戒代表著婚姻至高無上的專一、恆久與珍貴，誰會希望手上鑽石就像黃金一樣變動來變動去呢)，均衡反而變成多贏的結果。(不過這幾年許多公司如大家所喜愛的蒂芬尼，開始脫離該壟斷關係，大家就會發現該均衡開始慢慢移動囉)。</p>
+<h3 id="方法3-威脅與報復"><a href="#方法3-威脅與報復" class="headerlink" title="方法3. 威脅與報復"></a>方法3. 威脅與報復</h3><p>這個方法比較單純容易理解，之所以監獄或是檢察官難以實施囚犯困境給這些犯人，是因為對他們而言，往往留在監獄才是相對安全的選項，坦承出背後主謀或是老大，他們的生命更會受到威脅，因此原本的囚犯困境均衡自然崩解。這也是為什麼有時，極為惡劣的威脅或報復反而會造成恐怖平衡。</p>
+<h3 id="方法4-建立『信任』，取得賽局後動者的『承諾』，讓先動者買單"><a href="#方法4-建立『信任』，取得賽局後動者的『承諾』，讓先動者買單" class="headerlink" title="方法4. 建立『信任』，取得賽局後動者的『承諾』，讓先動者買單"></a>方法4. 建立『信任』，取得賽局後動者的『承諾』，讓先動者買單</h3><p>新成立的購物網站，要如何讓先匯款的客戶不會害怕購物網站提供劣質品呢？此購物網站比起其他店家提供可能更多售後服務，如保固，無條件退貨服務、直營客服等。同理，如果一囚犯願意承諾事後給另一囚犯另一筆錢或是其他服務，就能輕易改變囚犯困境的均衡結果。</p>
+<h3 id="方法5-建立一次次的『合作關係』"><a href="#方法5-建立一次次的『合作關係』" class="headerlink" title="方法5. 建立一次次的『合作關係』"></a>方法5. 建立一次次的『合作關係』</h3><p>之前所敘述囚犯困境是單一賽局，如果這個情況是重複賽局就不一樣了。一旦雙方形成合作關係就容易形成雙贏的局面。例如店家商譽之於客戶買單或拍賣的買賣雙方等等，都能透過之前的數次交易達成合作關係。</p>
+<p>以上就是書中五種方式脫離囚犯困境，但真實情況往往要更複雜，我想再跟大家談談一些台灣面臨的問題，要如何藉由透徹賽局，來應用在我們面臨的問題。</p>
+<h3 id="談『以租代買』"><a href="#談『以租代買』" class="headerlink" title="談『以租代買』"></a>談『以租代買』</h3><p>為了解決高房價，興建『<strong>以租代買</strong>』的公共住宅成為了許多候選人或是執政者常見的口號或政策方針。我一直很納悶為什麼是租呢，為什麼不是直接提供便宜房子讓年輕人去買去貸就好了，量一多價格就掉了，不是自由市場嗎？</p>
+<p>但在現在看來，先不論原本倡議『以租代買』這個理念是什麼用意，我想這個例子很明顯可以跟方法2中的鑽石故事相互對照，甚至可以說在實務上能夠反過來突破目前均衡狀態。第一點：房屋並非產量不足(台灣空屋率相當高)，如同鑽石一樣；第二點：東方人不僅僅有土斯有財，而房子的高單價反而會讓目前持有者不斷施壓影響房屋政策施行，例如殯儀館、垃圾場、公共住宅的位置等等。</p>
+<p>如同鑽石一樣，一旦突然不再珍貴也不再代表愛情，那大概就一文不值(可自行google鑽石歷史)，所以真正有效去破解目前這個均衡，除了『以租代買』外，更應該去<strong>修法保障租屋者以及租賃契約，同時保障老年者的租屋權利</strong>。這些政策，比起你我想像中的，<strong>提供相對低價的房屋</strong>之策略來得更有效，這就是賽局的有趣。</p>
+<p>感謝 Naiyu Kuo 潤稿</p>
+<p>參考資料</p>
+<ol>
+<li><a href="http://www.taaze.tw/sing.html?pid=14100014453" target="_blank" rel="external">賽局意識書籍</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Prisoner%27s_dilemma" target="_blank" rel="external">囚犯困境</a></li>
+<li><a href="https://en.wikipedia.org/wiki/De_Beers" target="_blank" rel="external">全世界最大的鑽石壟斷</a></li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/02/15/qin-rising/" itemprop="url">
+                  秦帝國崛起
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-02-15T00:00:00+08:00" content="2016-02-15">
+              2016-02-15
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/閱讀心得/" itemprop="url" rel="index">
+                    <span itemprop="name">閱讀心得</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/02/15/qin-rising/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/02/15/qin-rising/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p><img src="https://medium2.global.ssl.fastly.net/max/9448/1*pLcOkNIQCd5Ngm40gSka-g.jpeg" alt="from wiki"><em>from wiki</em></p>
+<p>近日讀台大歷史系呂世浩老師所著之「帝國掘起 — 一場歷史的思辨之旅 2」，對於中國古代秦帝國之大起大落有著深刻感想，歷經顛沛流離的秦人究竟擁有什麼樣子性格，才能在這個動盪幾百年的春秋戰國中稱霸呢？又有什麼是台灣人值得借鏡的呢？</p>
+<p>『生於憂患，死於安樂。』可說是秦人的最佳寫照，當初在商朝得勢的秦人，在紂王失敗後，被周王室趕往現今甘肅一代之地，以禦西方戎狄。簡單來說就是去當周人的炮灰，如同冰與火之歌之守夜人一般，世世代代抵禦著外面蠻族的入侵，然而無論兩軍是否發生戰事，周王室永遠都是得利者，但這些安排也造就了秦人好戰不屈服的的性格。</p>
+<p>在西周末年，正當周王室不再以禮治國時，西戎大舉入侵。而秦襄公也把握了周朝東遷避西戎的機會，擁護周平王並取得分封諸侯並獲得西岐之地，為什麼呢？周王室依然用了以前投機的方式，因為這些分封領土早已被西戎所佔領了，繼續讓秦人當砲灰吧，只不過這次，襄公成功趕走西戎，也正式建立起屬於秦人完整的地盤，代表著秦人終於在數百年後擁有自己的國家。</p>
+<p>多年後，秦繆公迎來五羖大夫百里奚以及其所推薦之蹇叔，其二人取材舉賢，不僅僅讓繆公成為當時五霸，也正式奠定了秦國一統天下的基礎。這裡最值得一提的是，繆公面對局勢，求新求變，只要有才，身為外國人的百里奚，他也願意用各種方式納入麾下。比起其他國家君主，繆公更了解治國之理沒有什麼比人才還重要之事。</p>
+<p>在戰國時期，秦國的商鞅，張儀，白起三位人才，也分別代表著法治，外交，軍事的三大強國方針。但這裡必須說，雖然秦國取得空前無比的絕佳發展，但也埋下了各種禍根。為什麼？因為國家一時的強盛是可以藉由政治，經濟，外交，軍事來達成的，但要建立所謂的歷史大朝，必須透過文化以及思想才可達成。然而最可惜的是，秦國在立國時僅專注於所謂的『強道』之上，順利崛起卻迅速灰飛煙滅了(同樣這幾位人才也是，可自行查查這三位人才最後的悲慘命運。)</p>
+<p>秦人好戰好鬥，圍繞著大敵，但也不會墮落認輸，反而奮發圖強。或許我們可以重新思考一下，台灣人除了最美的風景外還擁有什麼？我們歷經了各國的殖民，同樣資源缺乏，又有大國侵襲的情況下，我們可以怎樣去思考台灣的未來？秦人一樣是面對危機，卻能化為轉機，或許我們不需要像西方的秦國 — 以色列一樣，全力地富國強兵，行強道之路。而是想想身為唯一華人民主自由之地的台灣，是否還有在東亞的一席之地呢？我想秦帝國崛起給了我們一個性格決定命運的最佳啟示。</p>
+<p>我們可以富國強兵，我們可以求新求變，我們可以廣招人才，我們可以建立思想，我們可以塑造文化，但如同秦人，我們不能屈服。</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/01/22/major-party-cabinet-in-5-min/" itemprop="url">
+                  五分鐘理解『多數黨組閣』
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-01-22T00:00:00+08:00" content="2016-01-22">
+              2016-01-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/時事評論/" itemprop="url" rel="index">
+                    <span itemprop="name">時事評論</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/時事評論/政治/" itemprop="url" rel="index">
+                    <span itemprop="name">政治</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/01/22/major-party-cabinet-in-5-min/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/22/major-party-cabinet-in-5-min/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>前言：2016年台灣大選過後，民進黨獲得國會多數及黨主席蔡英文當選下任總統，而現任總統馬英九提出在看守期「多數黨組閣」，引起朝野以及憲法學者激烈爭論，本文將快速介紹多數黨組閣的精神以及現行憲法法理，以及可能的解決方案。</p>
+</blockquote>
+<p><img src="https://medium2.global.ssl.fastly.net/max/2000/1*bqWEu_CoEKhvnevc8oSXog.png" alt="REUTERS/ALY SONG"><em>REUTERS/ALY SONG</em></p>
+<h3 id="什麼是多數黨組閣？"><a href="#什麼是多數黨組閣？" class="headerlink" title="什麼是多數黨組閣？"></a>什麼是多數黨組閣？</h3><ol>
+<li><p>內閣制中，由<strong>多數黨黨魁或是多黨聯盟領袖擔任最高行政首長</strong>，如英國現任首相卡麥隆，既是現任首相，也是國會多數黨保守黨黨魁，同時也是下議院的議員。</p>
+</li>
+<li><p>混合制(或稱雙首長制)中，在民選元首與國會多數黨<strong>相異</strong>時，由<strong>元首指定</strong>多數黨黨魁或是推薦人選做為最高行政首長，例如1997年法國，喬斯班所率領的社會黨拿下國會多數，由所屬共和聯盟的總統席哈克指名為法國總理，為法國第五共和以來第三次左右共治。</p>
+</li>
+</ol>
+<h3 id="多數黨組閣的精神？行政首長來自國會並負責。"><a href="#多數黨組閣的精神？行政首長來自國會並負責。" class="headerlink" title="多數黨組閣的精神？行政首長來自國會並負責。"></a>多數黨組閣的精神？行政首長來自國會並負責。</h3><p>由上述段落可知，只要是國會多數，國會就取得組閣權，也就是立法與行政並非分立狀態，由立法來帶領行政，因為上任必須由國會同意，同時國會可以提出不信任案來倒閣，反而，總統<strong>沒有免職</strong>行政院長的權力，所以稱之行政首長對國會負責而非總統。</p>
+<h3 id="至於台灣呢？修憲後，行政首長對總統負責。"><a href="#至於台灣呢？修憲後，行政首長對總統負責。" class="headerlink" title="至於台灣呢？修憲後，行政首長對總統負責。"></a>至於台灣呢？修憲後，行政首長對總統負責。</h3><p>在憲法創立之初，我國是以內閣制做為出發點，總統乃虛位元首，如同英國女王與日本天皇一樣等君主立憲國相同，僅掌管外交等對外事務，而行政院長必須經由立法院行使同意權。但是，在多次修憲之後，台灣已經完全遠離了原本內閣制精神，而是<strong>偏向總統制的混合制</strong>。原因在於雖然國會仍有提出不信任案的權力，但行政院院長已經可以直接由總統<strong>單獨指派與免職</strong>，完全無須立法院同意；行政院雖需在法案上尋求立法院支持，但由於立法院對總統欠缺制衡機制，實際運作上行政院長多依遵於總統意旨，再去立法院協商可行方案。</p>
+<h3 id="爭議處"><a href="#爭議處" class="headerlink" title="爭議處"></a>爭議處</h3><p>馬總統在選後，正式提出所謂多數黨組閣，邀請國會多數黨黨魁蔡英文，選出準備接任的過渡時期內閣。如果以原始憲法精神以及民意所代表的統治正當性，當然由蔡英文所主導，為過渡時期的最佳選擇。但在實務上，經由上段可知，於<strong>現有憲法法理上並無規定</strong>當總統決策與多數黨的行政首長衝突時的解決方案，因為行政首長對總統負責。</p>
+<p>當然不否認，馬總統在此時提出，朝野議論紛紛，原因在於，上述混合制所提到的左右共治或是多數黨組閣並不是針對看守內閣所設計，畢竟依過去經驗維持現有內閣通過這個看守期，穩穩轉換政權即可。如一二次政黨輪替時，2000年蕭萬長院長看守內閣，以及2008年張俊雄院長看守內閣。</p>
+<h3 id="短期解決方案"><a href="#短期解決方案" class="headerlink" title="短期解決方案"></a>短期解決方案</h3><ol>
+<li><p>維持現狀，如同上段末處，由馬指派的看守內閣直接度過交接期。</p>
+</li>
+<li><p>在信任總統且有政黨共識情況的前提，由多數黨推薦看守內閣，雖然沒有憲法明文法理支持，但可以建立一個新的憲政慣例，並在之後修憲解決。</p>
+</li>
+<li><p>額外的法源提供交接與過渡時期使用，新國會可以立即通過，但必須避免新法律超越目前憲法所提供權責之疑問。</p>
+</li>
+<li><p>總統副總統雙辭，並由多數黨黨魁所擔任的行政院長遞補總統，如此以來在看守期下，即可由新民意來直接領導執政(包含總統與行政院長以及新國會)。</p>
+</li>
+</ol>
+<h3 id="永久解決方案"><a href="#永久解決方案" class="headerlink" title="永久解決方案"></a>永久解決方案</h3><p>修憲，重新確定台灣未來的政體方向，看是要往限縮總統權力的內閣制方向走，或者直接賦予總統直接行政權權力(如美國總統制)，避免出現行政院長對總統負責，但總統完全沒有法理行政責任的現況。(又被稱為總統有權無責)。畢竟就算採混合制的<strong>多數黨組閣入憲</strong>，長期出現左右共治(又稱為換軌)的情況，易造成政局不穩定。</p>
+<h3 id="關於看守內閣"><a href="#關於看守內閣" class="headerlink" title="關於看守內閣"></a>關於看守內閣</h3><p>實質上看守內閣不會是問題，無論是過去國內外經驗，只要保守地度過交接期即可，問題在於台灣是否要開始建立一套所謂的長治久安，而非現在這個漏洞百出的憲法所提供的權責分配與政治體制。</p>
+<p>感謝 Stalin Chen 協助編修</p>
+<p>參考資料</p>
+<ol>
+<li><a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E6%86%B2%E6%B3%95" target="_blank" rel="external">中華民國憲法維基百科</a></li>
+<li><a href="http://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=A0000002" target="_blank" rel="external">憲法增修條文</a></li>
+<li>法國第五共和雙首長制及其左右共治, 呂世昌</li>
+<li><a href="https://en.wikipedia.org/wiki/Lionel_Jospin" target="_blank" rel="external">第三次左右共治的法國總理喬斯潘</a></li>
+<li><a href="https://en.wikipedia.org/wiki/David_Cameron" target="_blank" rel="external">英國首相卡麥隆</a></li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/11/03/these-days-i-used-angularjs/" itemprop="url">
+                  These days I used AngularJS
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2015-11-03T00:00:00+08:00" content="2015-11-03">
+              2015-11-03
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/程式設計/" itemprop="url" rel="index">
+                    <span itemprop="name">程式設計</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/程式設計/Javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">Javascript</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/程式設計/Javascript/React/" itemprop="url" rel="index">
+                    <span itemprop="name">React</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/11/03/these-days-i-used-angularjs/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/11/03/these-days-i-used-angularjs/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>There are so many leading front-end libraries such as <a href="https://facebook.github.io/react/" target="_blank" rel="external">ReactJS</a>, <a href="http://cycle.js.org/" target="_blank" rel="external">CycleJS</a>, <a href="http://elm-lang.org/" target="_blank" rel="external">Elm</a> …, etc. But, today I want to talk about <a href="https://angularjs.org/" target="_blank" rel="external">AngularJS</a>, the first MV* framework I met.</p>
+<p><img src="https://medium2.global.ssl.fastly.net/max/2400/1*W1lQdBP_BKy8jz8jtW054w.jpeg" alt="">**</p>
+<p>It’s been over two years since I started my full-stack development career. There are so that many interesting and error-trying stories could be shared. The first project we wrote was based on jQuery and Node.js, we soon encountered problems because of numerous sporadical unstructured javascript codes in our project.</p>
+<p>So, we started to convert whole codebase into AngularJS framework. That’s exactly today’s topic I want to say. I was really amazed by the first look of demo on its official website. Especially, “<strong>two-way data binding</strong>”, you could easily bind the model to your view. The view automatically updated once model changed. How fantastic!</p>
+<p>We used <a href="http://mean.io/#!/" target="_blank" rel="external">MEAN</a> stack (combination of MongoDB, Express, Angular, and Node.js) to be our starting point. Everything was great, the views of application were indeed developed so quickly. However, one year later, along with project’s growth, it became so hard to maintain whole application state and its performance. I started to consider about some techniques about virtual-dom and Flux … And rethink some core issues of AngularJS.</p>
+<h3 id="It’s-not-simple-It-tries-to-cover-everything"><a href="#It’s-not-simple-It-tries-to-cover-everything" class="headerlink" title="It’s not simple. It tries to cover everything."></a>It’s not simple. It tries to cover everything.</h3><p>AngularJS want to do everything, you have to know so many concepts like module, controller, service, filter, routing, scope, directives …, etc. BANG! That’s why the guide book <a href="https://www.ng-book.com/" target="_blank" rel="external">ng-book</a> is up to 600+ pages. It’s hard to learn and cooperate for beginners.</p>
+<h3 id="Not-welcome-for-other-libraries"><a href="#Not-welcome-for-other-libraries" class="headerlink" title="Not welcome for other libraries"></a>Not welcome for other libraries</h3><p>If we want to use other libraries, we have to package them into AngularJS’ module. Although there are a bounty of contributors in community, it still would be a barrier for existing projects and WIP projects.</p>
+<h3 id="HTML-sugar-somehow-is-not-good"><a href="#HTML-sugar-somehow-is-not-good" class="headerlink" title="HTML sugar somehow is not good."></a>HTML sugar somehow is not good.</h3><p>We can view AngularJS as a strong jQuery because of its syntax sugar. After page loading, the core module will scan all DOMs with ng-syntax like ng-click, and bind the event on it. Nowadays, we all knew the manipulation of DOM is expensive. That’s why “html-based” AngularJS is not good for performance. And virtual-dom techniques will save us.</p>
+<h3 id="Two-way-data-binding-oh-no"><a href="#Two-way-data-binding-oh-no" class="headerlink" title="Two-way data binding, oh no."></a><strong>Two-way data binding, oh no.</strong></h3><p>In the blackbox, the only thing we know is AngularJS will do all the model checks which we called ‘dirty check’. So we have to write more and more $watch and $observe to make sure the application state. Also, the $scope’s inheritance always breaks application data flow. After using Flux or other unidirectional data flow diagram, it’s much more easy to debug. WHAT?! Do you remember the amazing part we mentioned? Yes, we removed it. The core, “ng-model” is gone.</p>
+<p>Hmmmmm… It sounds not cool for AngularJS lovers.</p>
+<h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>Therefore, I started using <a href="https://github.com/teropa/angular-virtual-dom" target="_blank" rel="external">angular-virtual-dom</a> and <a href="https://github.com/christianalfoni/flux-angular" target="_blank" rel="external">flux-angular</a> to reconstruct whole program. Somehow, it’s already far away from original code and the application paradigm. That’s why we use <a href="https://facebook.github.io/react/" target="_blank" rel="external">ReactJS</a> with Flux-like data flow now, not AngularJS.</p>
+<p>If you really want to use AngularJS, I strongly recommend it only in simple CURD cases. Or you may try the wholly different library <a href="https://angular.io/" target="_blank" rel="external">AngularJS 2.0</a>.</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://avatars1.githubusercontent.com/u/1138803"
+               alt="Guan Yu Pan" />
+          <p class="site-author-name" itemprop="name">Guan Yu Pan</p>
+          <p class="site-description motion-element" itemprop="description">FP Explorer With Full Stack JS #FRP #RxJS #Redux #React</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">6</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">11</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">14</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/jackypan1989" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.linkedin.com/in/pan-guan-yu-3874a150" target="_blank" title="Linkedin">
+                  
+                    <i class="fa fa-fw fa-linkedin-square"></i>
+                  
+                  Linkedin
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://facebook.com/jackypan1989" target="_blank" title="Facebook">
+                  
+                    <i class="fa fa-fw fa-facebook"></i>
+                  
+                  Facebook
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/jackypan1989" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.instagram.com/jackypan1989" target="_blank" title="Instagram">
+                  
+                    <i class="fa fa-fw fa-instagram"></i>
+                  
+                  Instagram
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://medium.com/@jackypan1989" target="_blank" title="Medium">
+                  
+                    <i class="fa fa-fw fa-medium"></i>
+                  
+                  Medium
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://stackoverflow.com/users/1957363/jackypan1989" target="_blank" title="S.O.">
+                  
+                    <i class="fa fa-fw fa-stack-overflow"></i>
+                  
+                  S.O.
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+
+      </section>
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Guan Yu Pan</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'jackypan1989';
+      var disqus_identifier = 'index.html';
+      var disqus_title = "";
+      var disqus_url = '';
+
+      function run_disqus_script(disqus_script){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+      
+    </script>
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+</body>
+</html>
