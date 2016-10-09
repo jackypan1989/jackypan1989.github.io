@@ -90,7 +90,7 @@
 <meta name="description" content="FP Explorer With Full Stack JS #FRP #RxJS #Redux #React">
 <meta property="og:type" content="website">
 <meta property="og:title" content="Guan Yu Pan's blog">
-<meta property="og:url" content="http://jackypan1989.com/categories/學習筆記/法律/刑法/index.html">
+<meta property="og:url" content="http://jackypan1989.com/page/2/index.html">
 <meta property="og:site_name" content="Guan Yu Pan's blog">
 <meta property="og:description" content="FP Explorer With Full Stack JS #FRP #RxJS #Redux #React">
 <meta name="twitter:card" content="summary">
@@ -116,9 +116,9 @@
 
 
 
-  <link rel="canonical" href="http://jackypan1989.com/categories/學習筆記/法律/刑法/"/>
+  <link rel="canonical" href="http://jackypan1989.com/page/2/"/>
 
-  <title> Category: 刑法 | Guan Yu Pan's blog </title>
+  <title> Guan Yu Pan's blog </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="en">
@@ -166,7 +166,9 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left  ">
+  <div class="container one-collumn sidebar-position-left 
+   page-home 
+ ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -263,96 +265,159 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
+  <section id="posts" class="posts-expand">
+    
+      
 
-  <section id="posts" class="posts-collapse">
-    <div class="collection-title">
-      <h2 >
-        刑法
-        <small>Category</small>
-      </h2>
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/11/03/these-days-i-used-angularjs/" itemprop="url">
+                  These days I used AngularJS
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2015-11-03T00:00:00+08:00" content="2015-11-03">
+              2015-11-03
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/程式設計/" itemprop="url" rel="index">
+                    <span itemprop="name">程式設計</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/程式設計/Javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">Javascript</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/程式設計/Javascript/React/" itemprop="url" rel="index">
+                    <span itemprop="name">React</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/11/03/these-days-i-used-angularjs/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/11/03/these-days-i-used-angularjs/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>There are so many leading front-end libraries such as <a href="https://facebook.github.io/react/" target="_blank" rel="external">ReactJS</a>, <a href="http://cycle.js.org/" target="_blank" rel="external">CycleJS</a>, <a href="http://elm-lang.org/" target="_blank" rel="external">Elm</a> …, etc. But, today I want to talk about <a href="https://angularjs.org/" target="_blank" rel="external">AngularJS</a>, the first MV* framework I met.</p>
+<p><img src="https://medium2.global.ssl.fastly.net/max/2400/1*W1lQdBP_BKy8jz8jtW054w.jpeg" alt="">**</p>
+<p>It’s been over two years since I started my full-stack development career. There are so that many interesting and error-trying stories could be shared. The first project we wrote was based on jQuery and Node.js, we soon encountered problems because of numerous sporadical unstructured javascript codes in our project.</p>
+<p>So, we started to convert whole codebase into AngularJS framework. That’s exactly today’s topic I want to say. I was really amazed by the first look of demo on its official website. Especially, “<strong>two-way data binding</strong>”, you could easily bind the model to your view. The view automatically updated once model changed. How fantastic!</p>
+<p>We used <a href="http://mean.io/#!/" target="_blank" rel="external">MEAN</a> stack (combination of MongoDB, Express, Angular, and Node.js) to be our starting point. Everything was great, the views of application were indeed developed so quickly. However, one year later, along with project’s growth, it became so hard to maintain whole application state and its performance. I started to consider about some techniques about virtual-dom and Flux … And rethink some core issues of AngularJS.</p>
+<h3 id="It’s-not-simple-It-tries-to-cover-everything"><a href="#It’s-not-simple-It-tries-to-cover-everything" class="headerlink" title="It’s not simple. It tries to cover everything."></a>It’s not simple. It tries to cover everything.</h3><p>AngularJS want to do everything, you have to know so many concepts like module, controller, service, filter, routing, scope, directives …, etc. BANG! That’s why the guide book <a href="https://www.ng-book.com/" target="_blank" rel="external">ng-book</a> is up to 600+ pages. It’s hard to learn and cooperate for beginners.</p>
+<h3 id="Not-welcome-for-other-libraries"><a href="#Not-welcome-for-other-libraries" class="headerlink" title="Not welcome for other libraries"></a>Not welcome for other libraries</h3><p>If we want to use other libraries, we have to package them into AngularJS’ module. Although there are a bounty of contributors in community, it still would be a barrier for existing projects and WIP projects.</p>
+<h3 id="HTML-sugar-somehow-is-not-good"><a href="#HTML-sugar-somehow-is-not-good" class="headerlink" title="HTML sugar somehow is not good."></a>HTML sugar somehow is not good.</h3><p>We can view AngularJS as a strong jQuery because of its syntax sugar. After page loading, the core module will scan all DOMs with ng-syntax like ng-click, and bind the event on it. Nowadays, we all knew the manipulation of DOM is expensive. That’s why “html-based” AngularJS is not good for performance. And virtual-dom techniques will save us.</p>
+<h3 id="Two-way-data-binding-oh-no"><a href="#Two-way-data-binding-oh-no" class="headerlink" title="Two-way data binding, oh no."></a><strong>Two-way data binding, oh no.</strong></h3><p>In the blackbox, the only thing we know is AngularJS will do all the model checks which we called ‘dirty check’. So we have to write more and more $watch and $observe to make sure the application state. Also, the $scope’s inheritance always breaks application data flow. After using Flux or other unidirectional data flow diagram, it’s much more easy to debug. WHAT?! Do you remember the amazing part we mentioned? Yes, we removed it. The core, “ng-model” is gone.</p>
+<p>Hmmmmm… It sounds not cool for AngularJS lovers.</p>
+<h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>Therefore, I started using <a href="https://github.com/teropa/angular-virtual-dom" target="_blank" rel="external">angular-virtual-dom</a> and <a href="https://github.com/christianalfoni/flux-angular" target="_blank" rel="external">flux-angular</a> to reconstruct whole program. Somehow, it’s already far away from original code and the application paradigm. That’s why we use <a href="https://facebook.github.io/react/" target="_blank" rel="external">ReactJS</a> with Flux-like data flow now, not AngularJS.</p>
+<p>If you really want to use AngularJS, I strongly recommend it only in simple CURD cases. Or you may try the wholly different library <a href="https://angular.io/" target="_blank" rel="external">AngularJS 2.0</a>.</p>
+
+          
+        
+      
     </div>
 
-    
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/10/04/criminal-note-3/" itemprop="url">
-              
-                <span itemprop="name">刑法筆記(3) - 罪刑法定主義</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-10-04T00:00:00+08:00"
-              content="2016-10-04" >
-          10-04
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
       
 
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/09/20/criminal-note-2/" itemprop="url">
-              
-                <span itemprop="name">刑法筆記(2) - 總則，分則，法益</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-09-20T00:00:00+08:00"
-              content="2016-09-20" >
-          09-20
-        </time>
-      </div>
-
-    </header>
-  </article>
-
-
-    
       
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
-
-      <h1 class="post-title">
-        
-            <a class="post-title-link" href="/2016/09/08/criminal-note-1/" itemprop="url">
-              
-                <span itemprop="name">刑法筆記(1) - 刑法概說</span>
-              
-            </a>
-        
-      </h1>
-
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2016-09-08T00:00:00+08:00"
-              content="2016-09-08" >
-          09-08
-        </time>
-      </div>
-
-    </header>
+      
+        <div class="post-eof"></div>
+      
+    </footer>
   </article>
 
 
@@ -360,6 +425,9 @@
   </section>
 
   
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><span class="page-number current">2</span>
+  </nav>
 
 
 
@@ -644,7 +712,7 @@
 
     <script type="text/javascript">
       var disqus_shortname = 'jackypan1989';
-      var disqus_identifier = 'categories/學習筆記/法律/刑法/index.html';
+      var disqus_identifier = 'page/2/index.html';
       var disqus_title = "";
       var disqus_url = '';
 
