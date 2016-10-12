@@ -288,6 +288,161 @@
             
               
                 
+                <a class="post-title-link" href="/2016/10/12/yarn-intro/" itemprop="url">
+                  取代 npm 的新利器 Yarn
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-10-12T00:00:00+08:00" content="2016-10-12">
+              2016-10-12
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/程式設計/" itemprop="url" rel="index">
+                    <span itemprop="name">程式設計</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/程式設計/Javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">Javascript</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/10/12/yarn-intro/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/10/12/yarn-intro/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>日前，Facebook 發布了全新的 JS 套件管理工具 <a href="https://yarnpkg.com" target="_blank" rel="external">Yarn</a>，如果你常發生以下幾個問題，我想 Yarn 會是你的解決方案</p>
+<ol>
+<li><p>「同事電腦 npm install OK，我卻 npm install 掛掉」，通常就是因為套件內部相依關係與你之前的檔案衝突，所以只好常常得先 sudo rm -rf node_modules/ 再重新安裝。</p>
+</li>
+<li><p>沒網路，npm install 直接掛給你看。</p>
+</li>
+<li><p>不同專案或不同資料夾下，都要更新某個套件。</p>
+</li>
+<li><p>npm install 非常久，久到可以泡杯咖啡聊個天，回來都還沒好。</p>
+</li>
+</ol>
+<h2 id="Yarn-提供一個更快更穩定的套件管理方案"><a href="#Yarn-提供一個更快更穩定的套件管理方案" class="headerlink" title="Yarn 提供一個更快更穩定的套件管理方案"></a>Yarn 提供一個更快更穩定的套件管理方案</h2><ol>
+<li><p>透過 yarn.lock ，鎖住套件版本，因此可以確保安裝之套件在每台機器上都能保持一致。</p>
+</li>
+<li><p>安裝過的套件，都會加入到 global cache 中，下次有砍掉要重裝，或是不同資料夾要裝，都可以在無網路情況底下安裝。</p>
+</li>
+<li><p>非常快，平行化處理每個 operation，全新的 resolving 演算法。</p>
+</li>
+</ol>
+<h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">// 以前裝過 npm 再安裝 yarn</div><div class="line">npm install -g yarn</div><div class="line"></div><div class="line">// 直接安裝 (mac為例，其餘官網有介紹)</div><div class="line">curl -o- -L https://yarnpkg.com/install.sh | bash</div><div class="line"></div><div class="line">// 一般安裝 (等同 npm install)</div><div class="line">yarn</div><div class="line"></div><div class="line">// 安裝特定套件 (等同 npm install --save)</div><div class="line">yarn add react         </div><div class="line">yarn add react@15.3.2</div><div class="line"></div><div class="line">// 更新特定套件 (等同 npm upgrade)</div><div class="line">yarn upgrade react</div><div class="line"></div><div class="line">// 移除特定套件 (等同 npm uninstall)</div><div class="line">yarn remove react</div><div class="line"></div><div class="line">// 新增 package.json</div><div class="line">yarn init</div><div class="line"></div><div class="line">// 新增全域套件</div><div class="line">yarn global add</div><div class="line"></div><div class="line">// 跑 script</div><div class="line">yarn run</div><div class="line"></div><div class="line">// 其他常用選項</div><div class="line">--offline   (離線模式，只拉 cache)</div><div class="line">--flat      (將套件扁平化，一個資料夾只會有一個套件)</div><div class="line">--dev       (加入到 devDependencies)</div><div class="line">--peer      (加入到 peerDependencies)</div><div class="line">--optional  (加入到 optionalDependencies)</div></pre></td></tr></table></figure>
+<p>作者實測結果，非常快且沒有遷移問題，可直接捨棄 npm。</p>
+<p>雖然說原本的 npm cache-min 設定時間 999999，以及 npm shrinkwrap 鎖版本，都可以達到 Yarn 所說的一些優化，不過 Yarn 本身在平行化處理部分有特別加強，也重寫了解析演算法，是一個完整的套件解決方案。</p>
+<p>附註: push 到 repo 時請記得要上 yarn.lock 檔案，才會確保其他機器都能安裝一樣的套件代碼。</p>
+<p>Yarn<br><a href="https://yarnpkg.com/" target="_blank" rel="external">https://yarnpkg.com/</a></p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
                 <a class="post-title-link" href="/2016/10/11/criminal-note-4/" itemprop="url">
                   刑法筆記(4) - 非當然解釋，時與地之效力
                 </a>
@@ -437,161 +592,6 @@
 <h4 id="165"><a href="#165" class="headerlink" title="165"></a>165</h4><p>偽造、變造、湮滅或隱匿關係他人刑事被告案件之證據，或使用偽造、變<br>造之證據者，處二年以下有期徒刑、拘役或五百元以下罰金。</p>
 <h4 id="169"><a href="#169" class="headerlink" title="169"></a>169</h4><p>意圖他人受刑事或懲戒處分，向該管公務員誣告者，處七年以下有期徒刑<br>。<br>意圖他人受刑事或懲戒處分，而偽造、變造證據，或使用偽造、變造之證<br>據者，亦同。</p>
 <h4 id="235"><a href="#235" class="headerlink" title="235"></a>235</h4><p>散佈、播送或販賣猥褻之文字、圖畫、聲音、影像或其他物品，或公然陳<br>列，或以他法供人觀覽、聽聞者，處二年以下有期徒刑、拘役或科或併科<br>三萬元以下罰金。<br>意圖散佈、播送、販賣而製造、持有前項文字、圖畫、聲音、影像及其附<br>著物或其他物品者，亦同。<br>前二項之文字、圖畫、聲音或影像之附著物及物品，不問屬於犯人與否，<br>沒收之。</p>
-
-          
-        
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <div>
-      
-    </div>
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </article>
-
-
-    
-      
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                
-                <a class="post-title-link" href="/2016/10/06/yarn-intro/" itemprop="url">
-                  取代 npm 的新利器 Yarn
-                </a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            <span class="post-meta-item-icon">
-              <i class="fa fa-calendar-o"></i>
-            </span>
-            <span class="post-meta-item-text">Posted on</span>
-            <time itemprop="dateCreated" datetime="2016-10-06T00:00:00+08:00" content="2016-10-06">
-              2016-10-06
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp;
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              <span class="post-meta-item-text">In</span>
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/程式設計/" itemprop="url" rel="index">
-                    <span itemprop="name">程式設計</span>
-                  </a>
-                </span>
-
-                
-                
-                  , 
-                
-
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/程式設計/Javascript/" itemprop="url" rel="index">
-                    <span itemprop="name">Javascript</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-                &nbsp; | &nbsp;
-                <a href="/2016/10/06/yarn-intro/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/10/06/yarn-intro/" itemprop="commentsCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-
-          
-          
-
-          
-        </div>
-      </header>
-    
-
-
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <p>日前，Facebook 發布了全新的 JS 套件管理工具 <a href="https://yarnpkg.com" target="_blank" rel="external">Yarn</a>，如果你常發生以下幾個問題，我想 Yarn 會是你的解決方案</p>
-<ol>
-<li><p>「同事電腦 npm install OK，我卻 npm install 掛掉」，通常就是因為套件內部相依關係與你之前的檔案衝突，所以只好常常得先 sudo rm -rf node_modules/ 再重新安裝。</p>
-</li>
-<li><p>沒網路，npm install 直接掛給你看。</p>
-</li>
-<li><p>不同專案或不同資料夾下，都要更新某個套件。</p>
-</li>
-<li><p>npm install 非常久，久到可以泡杯咖啡聊個天，回來都還沒好。</p>
-</li>
-</ol>
-<h2 id="Yarn-提供一個更快更穩定的套件管理方案"><a href="#Yarn-提供一個更快更穩定的套件管理方案" class="headerlink" title="Yarn 提供一個更快更穩定的套件管理方案"></a>Yarn 提供一個更快更穩定的套件管理方案</h2><ol>
-<li><p>透過 yarn.lock ，鎖住套件版本，因此可以確保安裝之套件在每台機器上都能保持一致。</p>
-</li>
-<li><p>安裝過的套件，都會加入到 global cache 中，下次有砍掉要重裝，或是不同資料夾要裝，都可以在無網路情況底下安裝。</p>
-</li>
-<li><p>非常快，平行化處理每個 operation，全新的 resolving 演算法。</p>
-</li>
-</ol>
-<h2 id="如何使用"><a href="#如何使用" class="headerlink" title="如何使用"></a>如何使用</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div></pre></td><td class="code"><pre><div class="line">// 以前裝過 npm 再安裝 yarn</div><div class="line">npm install -g yarn</div><div class="line"></div><div class="line">// 直接安裝 (mac為例，其餘官網有介紹)</div><div class="line">curl -o- -L https://yarnpkg.com/install.sh | bash</div><div class="line"></div><div class="line">// 一般安裝 (等同 npm install)</div><div class="line">yarn</div><div class="line"></div><div class="line">// 安裝特定套件 (等同 npm install --save)</div><div class="line">yarn add react         </div><div class="line">yarn add react@15.3.2</div><div class="line"></div><div class="line">// 更新特定套件 (等同 npm upgrade)</div><div class="line">yarn upgrade react</div><div class="line"></div><div class="line">// 移除特定套件 (等同 npm uninstall)</div><div class="line">yarn remove react</div><div class="line"></div><div class="line">// 新增 package.json</div><div class="line">yarn init</div><div class="line"></div><div class="line">// 新增全域套件</div><div class="line">yarn global add</div><div class="line"></div><div class="line">// 跑 script</div><div class="line">yarn run</div><div class="line"></div><div class="line">// 其他常用選項</div><div class="line">--offline   (離線模式，只拉 cache)</div><div class="line">--flat      (將套件扁平化，一個資料夾只會有一個套件)</div><div class="line">--dev       (加入到 devDependencies)</div><div class="line">--peer      (加入到 peerDependencies)</div><div class="line">--optional  (加入到 optionalDependencies)</div></pre></td></tr></table></figure>
-<p>作者實測結果，非常快且沒有遷移問題，可直接捨棄 npm。</p>
-<p>雖然說原本的 npm cache-min 設定時間 999999，以及 npm shrinkwrap 鎖版本，都可以達到 Yarn 所說的一些優化，不過 Yarn 本身在平行化處理部分有特別加強，也重寫了解析演算法，是一個完整的套件解決方案。</p>
-<p>附註: push 到 repo 時請記得要上 yarn.lock 檔案，才會確保其他機器都能安裝一樣的套件代碼。</p>
-<p>Yarn<br><a href="https://yarnpkg.com/" target="_blank" rel="external">https://yarnpkg.com/</a></p>
 
           
         
