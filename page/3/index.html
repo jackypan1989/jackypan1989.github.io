@@ -1,0 +1,915 @@
+<!doctype html>
+
+
+
+  
+
+
+<html class="theme-next pisces use-motion">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+  
+  
+  
+  
+
+  
+    
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+    
+    
+    <link href="//fonts.googleapis.com/css?family=Lato:300,300italic,400,400italic,700,700italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
+  
+
+
+
+
+
+
+<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.0.1" rel="stylesheet" type="text/css" />
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=5.0.1" />
+
+
+
+
+  <meta property="fb:admins" content="1567616149" />
+  <meta property="fb:app_id" content="214949102255965" />
+
+
+
+<meta name="description" content="FP Explorer With Full Stack JS #FRP #RxJS #Redux #React">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Guan Yu Pan's blog">
+<meta property="og:url" content="http://jackypan1989.com/page/3/index.html">
+<meta property="og:site_name" content="Guan Yu Pan's blog">
+<meta property="og:description" content="FP Explorer With Full Stack JS #FRP #RxJS #Redux #React">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Guan Yu Pan's blog">
+<meta name="twitter:description" content="FP Explorer With Full Stack JS #FRP #RxJS #Redux #React">
+
+
+
+<script type="text/javascript" id="hexo.configuration">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    scheme: 'Pisces',
+    sidebar: {"position":"left","display":"post"},
+    fancybox: true,
+    motion: true,
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    }
+  };
+</script>
+
+
+
+
+  <link rel="canonical" href="http://jackypan1989.com/page/3/"/>
+
+
+  <title> Guan Yu Pan's blog </title>
+</head>
+
+<body itemscope itemtype="//schema.org/WebPage" lang="en">
+
+  
+<script>
+  window.fbAsyncInit = function() {
+    FB.init({
+      appId      : '214949102255965',
+      xfbml      : true,
+      version    : 'v2.6'
+    });
+  };
+
+  (function(d, s, id){
+     var js, fjs = d.getElementsByTagName(s)[0];
+     if (d.getElementById(id)) {return;}
+     js = d.createElement(s); js.id = id;
+     js.src = "//connect.facebook.net/en/sdk.js";
+     fjs.parentNode.insertBefore(js, fjs);
+   }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+          m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-84986048-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+
+
+
+
+
+
+
+  
+  
+    
+  
+
+  <div class="container one-collumn sidebar-position-left 
+   page-home 
+ ">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="//schema.org/WPHeader">
+      <div class="header-inner"><div class="site-meta ">
+  
+
+  <div class="custom-logo-site-title">
+    <a href="/"  class="brand" rel="start">
+      <span class="logo-line-before"><i></i></span>
+      <span class="site-title">Guan Yu Pan's blog</span>
+      <span class="logo-line-after"><i></i></span>
+    </a>
+  </div>
+  <p class="site-subtitle">@jackypan1989</p>
+</div>
+
+<div class="site-nav-toggle">
+  <button>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+    <span class="btn-bar"></span>
+  </button>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-categories">
+          <a href="/categories" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
+            
+            Categories
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-about">
+          <a href="/about" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+            
+            About
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-tags">
+          <a href="/tags" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-tags"></i> <br />
+            
+            Tags
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2016/01/22/major-party-cabinet-in-5-min/" itemprop="url">
+                  五分鐘理解『多數黨組閣』
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2016-01-22T00:00:00+08:00" content="2016-01-22">
+              2016-01-22
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/時事評論/" itemprop="url" rel="index">
+                    <span itemprop="name">時事評論</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/時事評論/政治/" itemprop="url" rel="index">
+                    <span itemprop="name">政治</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2016/01/22/major-party-cabinet-in-5-min/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2016/01/22/major-party-cabinet-in-5-min/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <blockquote>
+<p>前言：2016年台灣大選過後，民進黨獲得國會多數及黨主席蔡英文當選下任總統，而現任總統馬英九提出在看守期「多數黨組閣」，引起朝野以及憲法學者激烈爭論，本文將快速介紹多數黨組閣的精神以及現行憲法法理，以及可能的解決方案。</p>
+</blockquote>
+<p><img src="https://medium2.global.ssl.fastly.net/max/2000/1*bqWEu_CoEKhvnevc8oSXog.png" alt="REUTERS/ALY SONG"><em>REUTERS/ALY SONG</em></p>
+<h3 id="什麼是多數黨組閣？"><a href="#什麼是多數黨組閣？" class="headerlink" title="什麼是多數黨組閣？"></a>什麼是多數黨組閣？</h3><ol>
+<li><p>內閣制中，由<strong>多數黨黨魁或是多黨聯盟領袖擔任最高行政首長</strong>，如英國現任首相卡麥隆，既是現任首相，也是國會多數黨保守黨黨魁，同時也是下議院的議員。</p>
+</li>
+<li><p>混合制(或稱雙首長制)中，在民選元首與國會多數黨<strong>相異</strong>時，由<strong>元首指定</strong>多數黨黨魁或是推薦人選做為最高行政首長，例如1997年法國，喬斯班所率領的社會黨拿下國會多數，由所屬共和聯盟的總統席哈克指名為法國總理，為法國第五共和以來第三次左右共治。</p>
+</li>
+</ol>
+<h3 id="多數黨組閣的精神？行政首長來自國會並負責。"><a href="#多數黨組閣的精神？行政首長來自國會並負責。" class="headerlink" title="多數黨組閣的精神？行政首長來自國會並負責。"></a>多數黨組閣的精神？行政首長來自國會並負責。</h3><p>由上述段落可知，只要是國會多數，國會就取得組閣權，也就是立法與行政並非分立狀態，由立法來帶領行政，因為上任必須由國會同意，同時國會可以提出不信任案來倒閣，反而，總統<strong>沒有免職</strong>行政院長的權力，所以稱之行政首長對國會負責而非總統。</p>
+<h3 id="至於台灣呢？修憲後，行政首長對總統負責。"><a href="#至於台灣呢？修憲後，行政首長對總統負責。" class="headerlink" title="至於台灣呢？修憲後，行政首長對總統負責。"></a>至於台灣呢？修憲後，行政首長對總統負責。</h3><p>在憲法創立之初，我國是以內閣制做為出發點，總統乃虛位元首，如同英國女王與日本天皇一樣等君主立憲國相同，僅掌管外交等對外事務，而行政院長必須經由立法院行使同意權。但是，在多次修憲之後，台灣已經完全遠離了原本內閣制精神，而是<strong>偏向總統制的混合制</strong>。原因在於雖然國會仍有提出不信任案的權力，但行政院院長已經可以直接由總統<strong>單獨指派與免職</strong>，完全無須立法院同意；行政院雖需在法案上尋求立法院支持，但由於立法院對總統欠缺制衡機制，實際運作上行政院長多依遵於總統意旨，再去立法院協商可行方案。</p>
+<h3 id="爭議處"><a href="#爭議處" class="headerlink" title="爭議處"></a>爭議處</h3><p>馬總統在選後，正式提出所謂多數黨組閣，邀請國會多數黨黨魁蔡英文，選出準備接任的過渡時期內閣。如果以原始憲法精神以及民意所代表的統治正當性，當然由蔡英文所主導，為過渡時期的最佳選擇。但在實務上，經由上段可知，於<strong>現有憲法法理上並無規定</strong>當總統決策與多數黨的行政首長衝突時的解決方案，因為行政首長對總統負責。</p>
+<p>當然不否認，馬總統在此時提出，朝野議論紛紛，原因在於，上述混合制所提到的左右共治或是多數黨組閣並不是針對看守內閣所設計，畢竟依過去經驗維持現有內閣通過這個看守期，穩穩轉換政權即可。如一二次政黨輪替時，2000年蕭萬長院長看守內閣，以及2008年張俊雄院長看守內閣。</p>
+<h3 id="短期解決方案"><a href="#短期解決方案" class="headerlink" title="短期解決方案"></a>短期解決方案</h3><ol>
+<li><p>維持現狀，如同上段末處，由馬指派的看守內閣直接度過交接期。</p>
+</li>
+<li><p>在信任總統且有政黨共識情況的前提，由多數黨推薦看守內閣，雖然沒有憲法明文法理支持，但可以建立一個新的憲政慣例，並在之後修憲解決。</p>
+</li>
+<li><p>額外的法源提供交接與過渡時期使用，新國會可以立即通過，但必須避免新法律超越目前憲法所提供權責之疑問。</p>
+</li>
+<li><p>總統副總統雙辭，並由多數黨黨魁所擔任的行政院長遞補總統，如此以來在看守期下，即可由新民意來直接領導執政(包含總統與行政院長以及新國會)。</p>
+</li>
+</ol>
+<h3 id="永久解決方案"><a href="#永久解決方案" class="headerlink" title="永久解決方案"></a>永久解決方案</h3><p>修憲，重新確定台灣未來的政體方向，看是要往限縮總統權力的內閣制方向走，或者直接賦予總統直接行政權權力(如美國總統制)，避免出現行政院長對總統負責，但總統完全沒有法理行政責任的現況。(又被稱為總統有權無責)。畢竟就算採混合制的<strong>多數黨組閣入憲</strong>，長期出現左右共治(又稱為換軌)的情況，易造成政局不穩定。</p>
+<h3 id="關於看守內閣"><a href="#關於看守內閣" class="headerlink" title="關於看守內閣"></a>關於看守內閣</h3><p>實質上看守內閣不會是問題，無論是過去國內外經驗，只要保守地度過交接期即可，問題在於台灣是否要開始建立一套所謂的長治久安，而非現在這個漏洞百出的憲法所提供的權責分配與政治體制。</p>
+<p>感謝 Stalin Chen 協助編修</p>
+<p>參考資料</p>
+<ol>
+<li><a href="https://zh.wikipedia.org/wiki/%E4%B8%AD%E8%8F%AF%E6%B0%91%E5%9C%8B%E6%86%B2%E6%B3%95" target="_blank" rel="external">中華民國憲法維基百科</a></li>
+<li><a href="http://law.moj.gov.tw/LawClass/LawAll.aspx?PCode=A0000002" target="_blank" rel="external">憲法增修條文</a></li>
+<li>法國第五共和雙首長制及其左右共治, 呂世昌</li>
+<li><a href="https://en.wikipedia.org/wiki/Lionel_Jospin" target="_blank" rel="external">第三次左右共治的法國總理喬斯潘</a></li>
+<li><a href="https://en.wikipedia.org/wiki/David_Cameron" target="_blank" rel="external">英國首相卡麥隆</a></li>
+</ol>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+      
+
+  
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal " itemscope itemtype="//schema.org/Article">
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+            
+            
+              
+                
+                <a class="post-title-link" href="/2015/11/03/these-days-i-used-angularjs/" itemprop="url">
+                  These days I used AngularJS
+                </a>
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            <span class="post-meta-item-icon">
+              <i class="fa fa-calendar-o"></i>
+            </span>
+            <span class="post-meta-item-text">Posted on</span>
+            <time itemprop="dateCreated" datetime="2015-11-03T00:00:00+08:00" content="2015-11-03">
+              2015-11-03
+            </time>
+          </span>
+
+          
+            <span class="post-category" >
+              &nbsp; | &nbsp;
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              <span class="post-meta-item-text">In</span>
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/程式設計/" itemprop="url" rel="index">
+                    <span itemprop="name">程式設計</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/程式設計/Javascript/" itemprop="url" rel="index">
+                    <span itemprop="name">Javascript</span>
+                  </a>
+                </span>
+
+                
+                
+                  , 
+                
+
+              
+                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
+                  <a href="/categories/程式設計/Javascript/React/" itemprop="url" rel="index">
+                    <span itemprop="name">React</span>
+                  </a>
+                </span>
+
+                
+                
+
+              
+            </span>
+          
+
+          
+            
+              <span class="post-comments-count">
+                &nbsp; | &nbsp;
+                <a href="/2015/11/03/these-days-i-used-angularjs/#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/11/03/these-days-i-used-angularjs/" itemprop="commentsCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+
+          
+          
+
+          
+        </div>
+      </header>
+    
+
+
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          
+            <p>There are so many leading front-end libraries such as <a href="https://facebook.github.io/react/" target="_blank" rel="external">ReactJS</a>, <a href="http://cycle.js.org/" target="_blank" rel="external">CycleJS</a>, <a href="http://elm-lang.org/" target="_blank" rel="external">Elm</a> …, etc. But, today I want to talk about <a href="https://angularjs.org/" target="_blank" rel="external">AngularJS</a>, the first MV* framework I met.</p>
+<p><img src="https://medium2.global.ssl.fastly.net/max/2400/1*W1lQdBP_BKy8jz8jtW054w.jpeg" alt="">**</p>
+<p>It’s been over two years since I started my full-stack development career. There are so that many interesting and error-trying stories could be shared. The first project we wrote was based on jQuery and Node.js, we soon encountered problems because of numerous sporadical unstructured javascript codes in our project.</p>
+<p>So, we started to convert whole codebase into AngularJS framework. That’s exactly today’s topic I want to say. I was really amazed by the first look of demo on its official website. Especially, “<strong>two-way data binding</strong>”, you could easily bind the model to your view. The view automatically updated once model changed. How fantastic!</p>
+<p>We used <a href="http://mean.io/#!/" target="_blank" rel="external">MEAN</a> stack (combination of MongoDB, Express, Angular, and Node.js) to be our starting point. Everything was great, the views of application were indeed developed so quickly. However, one year later, along with project’s growth, it became so hard to maintain whole application state and its performance. I started to consider about some techniques about virtual-dom and Flux … And rethink some core issues of AngularJS.</p>
+<h3 id="It’s-not-simple-It-tries-to-cover-everything"><a href="#It’s-not-simple-It-tries-to-cover-everything" class="headerlink" title="It’s not simple. It tries to cover everything."></a>It’s not simple. It tries to cover everything.</h3><p>AngularJS want to do everything, you have to know so many concepts like module, controller, service, filter, routing, scope, directives …, etc. BANG! That’s why the guide book <a href="https://www.ng-book.com/" target="_blank" rel="external">ng-book</a> is up to 600+ pages. It’s hard to learn and cooperate for beginners.</p>
+<h3 id="Not-welcome-for-other-libraries"><a href="#Not-welcome-for-other-libraries" class="headerlink" title="Not welcome for other libraries"></a>Not welcome for other libraries</h3><p>If we want to use other libraries, we have to package them into AngularJS’ module. Although there are a bounty of contributors in community, it still would be a barrier for existing projects and WIP projects.</p>
+<h3 id="HTML-sugar-somehow-is-not-good"><a href="#HTML-sugar-somehow-is-not-good" class="headerlink" title="HTML sugar somehow is not good."></a>HTML sugar somehow is not good.</h3><p>We can view AngularJS as a strong jQuery because of its syntax sugar. After page loading, the core module will scan all DOMs with ng-syntax like ng-click, and bind the event on it. Nowadays, we all knew the manipulation of DOM is expensive. That’s why “html-based” AngularJS is not good for performance. And virtual-dom techniques will save us.</p>
+<h3 id="Two-way-data-binding-oh-no"><a href="#Two-way-data-binding-oh-no" class="headerlink" title="Two-way data binding, oh no."></a><strong>Two-way data binding, oh no.</strong></h3><p>In the blackbox, the only thing we know is AngularJS will do all the model checks which we called ‘dirty check’. So we have to write more and more $watch and $observe to make sure the application state. Also, the $scope’s inheritance always breaks application data flow. After using Flux or other unidirectional data flow diagram, it’s much more easy to debug. WHAT?! Do you remember the amazing part we mentioned? Yes, we removed it. The core, “ng-model” is gone.</p>
+<p>Hmmmmm… It sounds not cool for AngularJS lovers.</p>
+<h3 id="Conclusion"><a href="#Conclusion" class="headerlink" title="Conclusion"></a>Conclusion</h3><p>Therefore, I started using <a href="https://github.com/teropa/angular-virtual-dom" target="_blank" rel="external">angular-virtual-dom</a> and <a href="https://github.com/christianalfoni/flux-angular" target="_blank" rel="external">flux-angular</a> to reconstruct whole program. Somehow, it’s already far away from original code and the application paradigm. That’s why we use <a href="https://facebook.github.io/react/" target="_blank" rel="external">ReactJS</a> with Flux-like data flow now, not AngularJS.</p>
+<p>If you really want to use AngularJS, I strongly recommend it only in simple CURD cases. Or you may try the wholly different library <a href="https://angular.io/" target="_blank" rel="external">AngularJS 2.0</a>.</p>
+
+          
+        
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <div>
+      
+    </div>
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </article>
+
+
+    
+  </section>
+
+  
+  <nav class="pagination">
+    <a class="extend prev" rel="prev" href="/page/2/"><i class="fa fa-angle-left"></i></a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span>
+  </nav>
+
+
+
+          </div>
+          
+
+
+          
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview sidebar-panel  sidebar-panel-active ">
+        <div class="site-author motion-element" itemprop="author" itemscope itemtype="//schema.org/Person">
+          <img class="site-author-image" itemprop="image"
+               src="https://avatars1.githubusercontent.com/u/1138803"
+               alt="Guan Yu Pan" />
+          <p class="site-author-name" itemprop="name">Guan Yu Pan</p>
+          <p class="site-description motion-element" itemprop="description">FP Explorer With Full Stack JS #FRP #RxJS #Redux #React</p>
+        </div>
+        <nav class="site-state motion-element">
+          <div class="site-state-item site-state-posts">
+            <a href="/archives">
+              <span class="site-state-item-count">22</span>
+              <span class="site-state-item-name">posts</span>
+            </a>
+          </div>
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">12</span>
+                <span class="site-state-item-name">categories</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">53</span>
+                <span class="site-state-item-name">tags</span>
+              </a>
+            </div>
+          
+
+        </nav>
+
+        
+
+        <div class="links-of-author motion-element">
+          
+            
+              <span class="links-of-author-item">
+                <a href="https://github.com/jackypan1989" target="_blank" title="GitHub">
+                  
+                    <i class="fa fa-fw fa-github"></i>
+                  
+                  GitHub
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.linkedin.com/in/pan-guan-yu-3874a150" target="_blank" title="Linkedin">
+                  
+                    <i class="fa fa-fw fa-linkedin-square"></i>
+                  
+                  Linkedin
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://facebook.com/jackypan1989" target="_blank" title="Facebook">
+                  
+                    <i class="fa fa-fw fa-facebook"></i>
+                  
+                  Facebook
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://twitter.com/jackypan1989" target="_blank" title="Twitter">
+                  
+                    <i class="fa fa-fw fa-twitter"></i>
+                  
+                  Twitter
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://www.instagram.com/jackypan1989" target="_blank" title="Instagram">
+                  
+                    <i class="fa fa-fw fa-instagram"></i>
+                  
+                  Instagram
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="https://medium.com/@jackypan1989" target="_blank" title="Medium">
+                  
+                    <i class="fa fa-fw fa-medium"></i>
+                  
+                  Medium
+                </a>
+              </span>
+            
+              <span class="links-of-author-item">
+                <a href="http://stackoverflow.com/users/1957363/jackypan1989" target="_blank" title="S.O.">
+                  
+                    <i class="fa fa-fw fa-stack-overflow"></i>
+                  
+                  S.O.
+                </a>
+              </span>
+            
+          
+        </div>
+
+        
+        
+          <div class="cc-license motion-element" itemprop="license">
+            <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" class="cc-opacity" target="_blank">
+              <img src="/images/cc-by-nc-sa.svg" alt="Creative Commons" />
+            </a>
+          </div>
+        
+
+        
+        
+
+      </section>
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright" >
+  
+  &copy; 
+  <span itemprop="copyrightYear">2016</span>
+  <span class="with-love">
+    <i class="fa fa-heart"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Guan Yu Pan</span>
+</div>
+
+<div class="powered-by">
+  Powered by <a class="theme-link" href="https://hexo.io">Hexo</a>
+</div>
+
+<div class="theme-info">
+  Theme -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Pisces
+  </a>
+</div>
+
+        
+
+<div class="busuanzi-count">
+
+  <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="site-uv"><i class="fa fa-user"></i><span class="busuanzi-value" id="busuanzi_value_site_uv"></span></span>
+  
+
+  
+    <span class="site-pv"><i class="fa fa-eye"></i><span class="busuanzi-value" id="busuanzi_value_site_pv"></span></span>
+  
+  
+</div>
+
+
+
+        
+      </div>
+    </footer>
+
+    <div class="back-to-top">
+      <i class="fa fa-arrow-up"></i>
+    </div>
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+  
+  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+
+  
+  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.0.1"></script>
+
+
+
+  
+  
+
+
+  <script type="text/javascript" src="/js/src/affix.js?v=5.0.1"></script>
+
+  <script type="text/javascript" src="/js/src/schemes/pisces.js?v=5.0.1"></script>
+
+
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.0.1"></script>
+
+
+
+  
+
+
+
+  
+
+    <script type="text/javascript">
+      var disqus_shortname = 'jackypan1989';
+      var disqus_identifier = 'page/3/index.html';
+      var disqus_title = "";
+      var disqus_url = '';
+
+      function run_disqus_script(disqus_script){
+        var dsq = document.createElement('script');
+        dsq.type = 'text/javascript';
+        dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      }
+
+      run_disqus_script('count.js');
+      
+    </script>
+  
+
+
+
+
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+
+</body>
+</html>
